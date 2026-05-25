@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de KPIs</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color:#f4f6f9;
+            margin:40px;
+            color:#333;
+        }
+
+        h1{
+            text-align:center;
+            color:#1f4e79;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:30px;
+            background:white;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        th{
+            background-color:#1f4e79;
+            color:white;
+            padding:12px;
+            text-align:center;
+        }
+
+        td{
+            padding:12px;
+            border-bottom:1px solid #ddd;
+            text-align:center;
+        }
+
+        tr:hover{
+            background-color:#f1f1f1;
+        }
+
+        .cumple{
+            color:green;
+            font-weight:bold;
+        }
+
+        .parcial{
+            color:#d68910;
+            font-weight:bold;
+        }
+
+        .no-evaluable{
+            color:#7d7d7d;
+            font-weight:bold;
+        }
+
+        .aceptado{
+            color:#1f618d;
+            font-weight:bold;
+        }
+
+        .conclusion{
+            margin-top:40px;
+            background:white;
+            padding:20px;
+            border-radius:8px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+            line-height:1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Evaluación de KPIs del Dataset de Aguacate 2019-2024</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>KPI</th>
+                <th>Meta</th>
+                <th>Resultado Obtenido</th>
+                <th>Cumplimiento</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>% de Desviación de Rendimiento</td>
+                <td>&lt; 10%</td>
+                <td>No se evidencian variaciones inconsistentes</td>
+                <td class="parcial">Cumple parcialmente</td>
+            </tr>
+
+            <tr>
+                <td>Tasa de Nulidad</td>
+                <td>&lt; 5%</td>
+                <td>0% de valores nulos</td>
+                <td class="cumple">Cumple</td>
+            </tr>
+
+            <tr>
+                <td>Índice de Integridad Geo</td>
+                <td>100%</td>
+                <td>Códigos Dane válidos y consistentes</td>
+                <td class="cumple">Cumple</td>
+            </tr>
+
+            <tr>
+                <td>Tasa de Datos Atípicos</td>
+                <td>&lt; 2%</td>
+                <td>
+                    Se identificaron valores atípicos asociados a diferencias reales
+                    entre municipios y niveles de producción
+                </td>
+                <td class="aceptado">Aceptado y justificado</td>
+            </tr>
+
+            <tr>
+                <td>Tasa de Duplicidad</td>
+                <td>0%</td>
+                <td>No se encontraron registros duplicados</td>
+                <td class="cumple">Cumple</td>
+            </tr>
+
+            <tr>
+                <td>Eficiencia de Limpieza</td>
+                <td>&gt; 95%</td>
+                <td>Procesamiento adecuado sin pérdidas relevantes</td>
+                <td class="cumple">Cumple</td>
+            </tr>
+
+            <tr>
+                <td>Coherencia de Lineaje</td>
+                <td>100%</td>
+                <td>No puede validarse únicamente con el dataset</td>
+                <td class="no-evaluable">No evaluable</td>
+            </tr>
+
+            <tr>
+                <td>Error en Cruce de Datos</td>
+                <td>&lt; 1%</td>
+                <td>No se identificaron inconsistencias relevantes</td>
+                <td class="parcial">Cumple parcialmente</td>
+            </tr>
+
+            <tr>
+                <td>Índice de Jerarquía</td>
+                <td>100%</td>
+                <td>Permite análisis por departamento y municipio</td>
+                <td class="cumple">Cumple</td>
+            </tr>
+
+            <tr>
+                <td>Observaciones por Ambigüedad</td>
+                <td>0</td>
+                <td>Variables claras y definidas</td>
+                <td class="cumple">Cumple</td>
+            </tr>
+
+            <tr>
+                <td>Tasa de Error de Filtros</td>
+                <td>0 errores</td>
+                <td>No evaluable únicamente con el CSV</td>
+                <td class="no-evaluable">No evaluable</td>
+            </tr>
+
+            <tr>
+                <td>Latencia de Carga</td>
+                <td>&lt; 4 segundos</td>
+                <td>No evaluable sin entorno de visualización</td>
+                <td class="no-evaluable">No evaluable</td>
+            </tr>
+
+            <tr>
+                <td>Disponibilidad Documental</td>
+                <td>100%</td>
+                <td>Variables identificables y estructuradas</td>
+                <td class="parcial">Cumple parcialmente</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <div class="conclusion">
+        <h2>Conclusión</h2>
+
+        <p>
+            El análisis de los KPIs evidencia que el dataset presenta un adecuado nivel de calidad,
+            especialmente en términos de completitud, integridad geográfica y ausencia de duplicados.
+            Aunque se detectaron datos atípicos, estos fueron conservados debido a que representan
+            condiciones reales de producción entre los diferentes municipios analizados, permitiendo
+            mantener la representatividad y variabilidad natural de los datos agrícolas.
+        </p>
+    </div>
+
+</body>
+</html>
